@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B97BDB371C59196F00227D0F /* mergePDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B97BDB361C59196F00227D0F /* mergePDFView.m */; };
+		B97BDB381C59199D00227D0F /* mergePDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97BDB3A1C59199D00227D0F /* mergePDFView.xib */; };
+		B97BDB401C59251300227D0F /* splitPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B97BDB3E1C59251300227D0F /* splitPDFView.m */; };
+		B97BDB421C592C3F00227D0F /* splitPDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97BDB441C592C3F00227D0F /* splitPDFView.xib */; };
 		B9E7E1401C58AB2400B04EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */; };
 		B9E7E1431C58AB2400B04EA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E1421C58AB2400B04EA8 /* main.m */; };
 		B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */; };
@@ -14,6 +18,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B97BDB351C59196F00227D0F /* mergePDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergePDFView.h; sourceTree = "<group>"; };
+		B97BDB361C59196F00227D0F /* mergePDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mergePDFView.m; sourceTree = "<group>"; };
+		B97BDB391C59199D00227D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/mergePDFView.xib; sourceTree = "<group>"; };
+		B97BDB3C1C5919B000227D0F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/mergePDFView.strings; sourceTree = "<group>"; };
+		B97BDB3D1C59251300227D0F /* splitPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = splitPDFView.h; sourceTree = "<group>"; };
+		B97BDB3E1C59251300227D0F /* splitPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = splitPDFView.m; sourceTree = "<group>"; };
+		B97BDB431C592C3F00227D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/splitPDFView.xib; sourceTree = "<group>"; };
+		B97BDB461C592C4500227D0F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/splitPDFView.strings; sourceTree = "<group>"; };
 		B9E7E13B1C58AB2400B04EA8 /* Sao's PDF Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao's PDF Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E7E13E1C58AB2400B04EA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -21,6 +33,7 @@
 		B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9E7E1471C58AB2400B04EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B9E7E1491C58AB2400B04EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E7E1511C58AD7100B04EA8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +70,12 @@
 				B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */,
 				B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */,
 				B9E7E1461C58AB2400B04EA8 /* MainMenu.xib */,
+				B97BDB351C59196F00227D0F /* mergePDFView.h */,
+				B97BDB361C59196F00227D0F /* mergePDFView.m */,
+				B97BDB3A1C59199D00227D0F /* mergePDFView.xib */,
+				B97BDB3D1C59251300227D0F /* splitPDFView.h */,
+				B97BDB3E1C59251300227D0F /* splitPDFView.m */,
+				B97BDB441C592C3F00227D0F /* splitPDFView.xib */,
 				B9E7E1491C58AB2400B04EA8 /* Info.plist */,
 				B9E7E1411C58AB2400B04EA8 /* Supporting Files */,
 			);
@@ -112,6 +131,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = B9E7E1321C58AB2300B04EA8;
 			productRefGroup = B9E7E13C1C58AB2400B04EA8 /* Products */;
@@ -129,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */,
+				B97BDB381C59199D00227D0F /* mergePDFView.xib in Resources */,
+				B97BDB421C592C3F00227D0F /* splitPDFView.xib in Resources */,
 				B9E7E1481C58AB2400B04EA8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97BDB371C59196F00227D0F /* mergePDFView.m in Sources */,
 				B9E7E1431C58AB2400B04EA8 /* main.m in Sources */,
+				B97BDB401C59251300227D0F /* splitPDFView.m in Sources */,
 				B9E7E1401C58AB2400B04EA8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,10 +172,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B97BDB3A1C59199D00227D0F /* mergePDFView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B97BDB391C59199D00227D0F /* Base */,
+				B97BDB3C1C5919B000227D0F /* ja */,
+			);
+			name = mergePDFView.xib;
+			sourceTree = "<group>";
+		};
+		B97BDB441C592C3F00227D0F /* splitPDFView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B97BDB431C592C3F00227D0F /* Base */,
+				B97BDB461C592C4500227D0F /* ja */,
+			);
+			name = splitPDFView.xib;
+			sourceTree = "<group>";
+		};
 		B9E7E1461C58AB2400B04EA8 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B9E7E1471C58AB2400B04EA8 /* Base */,
+				B9E7E1511C58AD7100B04EA8 /* ja */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -195,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -232,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -245,8 +288,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Sao's PDF Kit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sao.Sao-s-PDF-Kit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -257,8 +302,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Sao's PDF Kit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "Sao.Sao-s-PDF-Kit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -281,6 +328,7 @@
 				B9E7E14E1C58AB2400B04EA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
