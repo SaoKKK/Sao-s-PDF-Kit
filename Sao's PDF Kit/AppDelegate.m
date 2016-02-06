@@ -12,29 +12,38 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    
+}
+
 @synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    [self loadView:@"mergePDFView"];
     tabList = [NSArray arrayWithObjects:tabButton1,tabButton2,tabButton3,nil];
 }
 
-- (void)awakeFromNib{
-    PDFLst = [NSMutableArray array];
-    errLst = [NSMutableArray array];
+- (id)init{
+    self = [super init];
+    if (self) {
+        PDFLst = [NSMutableArray array];
+        errLst = [NSMutableArray array];
+    }
+    return self;
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
 }
 
-- (void)loadView:(NSString *)viewName{
-    if(_currentViewController){
-        [[_currentViewController view] removeFromSuperview];
+- (IBAction)comboPageRange:(id)sender {
+    if ([sender indexOfSelectedItem] == 0) {
+        [sender setStringValue:@"All Pages"];
+        [_window makeFirstResponder:nil];
+        [sender setEditable:NO];
+    } else if ([sender indexOfSelectedItem] == 1){
+        [sender setStringValue:@""];
+        [sender setEditable:YES];
+        [_window makeFirstResponder:sender];
     }
-    _currentViewController = [[NSViewController alloc]initWithNibName:viewName bundle:nil];
-    NSView *view = [_currentViewController view];
-    [_contentView addSubview:view];
 }
 
 @end

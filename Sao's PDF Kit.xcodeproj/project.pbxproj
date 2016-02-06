@@ -7,16 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B95336EF1C5CA94700539667 /* mergePDFView.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336EC1C5CA94700539667 /* mergePDFView.png */; };
-		B95336F01C5CA94700539667 /* splitPDFView.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336ED1C5CA94700539667 /* splitPDFView.png */; };
-		B95336F11C5CA94700539667 /* editLabelView.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336EE1C5CA94700539667 /* editLabelView.png */; };
-		B95336F51C5CB31200539667 /* editLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B95336F31C5CB31200539667 /* editLabelView.m */; };
-		B95336F71C5CB3A100539667 /* editLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95336F91C5CB3A100539667 /* editLabelView.xib */; };
-		B97BDB381C59199D00227D0F /* mergePDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97BDB3A1C59199D00227D0F /* mergePDFView.xib */; };
-		B97BDB401C59251300227D0F /* splitPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B97BDB3E1C59251300227D0F /* splitPDFView.m */; };
-		B97BDB421C592C3F00227D0F /* splitPDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97BDB441C592C3F00227D0F /* splitPDFView.xib */; };
+		B95336EF1C5CA94700539667 /* mergePDF.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336EC1C5CA94700539667 /* mergePDF.png */; };
+		B95336F01C5CA94700539667 /* splitPDF.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336ED1C5CA94700539667 /* splitPDF.png */; };
+		B95336F11C5CA94700539667 /* editLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = B95336EE1C5CA94700539667 /* editLabel.png */; };
 		B980C8D01C64F6CB0099272E /* CCDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B980C8CF1C64F6CB0099272E /* CCDropTableView.m */; };
-		B987736C1C654A0000F16116 /* mergePDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B987736B1C654A0000F16116 /* mergePDFView.m */; };
+		B987736E1C65C4B700F16116 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B987736D1C65C4B600F16116 /* Quartz.framework */; };
 		B9E7E1401C58AB2400B04EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */; };
 		B9E7E1431C58AB2400B04EA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E1421C58AB2400B04EA8 /* main.m */; };
 		B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */; };
@@ -25,23 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B95336EC1C5CA94700539667 /* mergePDFView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mergePDFView.png; path = "Sao's PDF Kit/Graphics/mergePDFView.png"; sourceTree = "<group>"; };
-		B95336ED1C5CA94700539667 /* splitPDFView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splitPDFView.png; path = "Sao's PDF Kit/Graphics/splitPDFView.png"; sourceTree = "<group>"; };
-		B95336EE1C5CA94700539667 /* editLabelView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editLabelView.png; path = "Sao's PDF Kit/Graphics/editLabelView.png"; sourceTree = "<group>"; };
-		B95336F21C5CB31200539667 /* editLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editLabelView.h; sourceTree = "<group>"; };
-		B95336F31C5CB31200539667 /* editLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = editLabelView.m; sourceTree = "<group>"; };
-		B95336F81C5CB3A100539667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/editLabelView.xib; sourceTree = "<group>"; };
-		B95336FB1C5CB3CC00539667 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/editLabelView.strings; sourceTree = "<group>"; };
-		B97BDB391C59199D00227D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/mergePDFView.xib; sourceTree = "<group>"; };
-		B97BDB3C1C5919B000227D0F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/mergePDFView.strings; sourceTree = "<group>"; };
-		B97BDB3D1C59251300227D0F /* splitPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = splitPDFView.h; sourceTree = "<group>"; };
-		B97BDB3E1C59251300227D0F /* splitPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = splitPDFView.m; sourceTree = "<group>"; };
-		B97BDB431C592C3F00227D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/splitPDFView.xib; sourceTree = "<group>"; };
-		B97BDB461C592C4500227D0F /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/splitPDFView.strings; sourceTree = "<group>"; };
+		B95336EC1C5CA94700539667 /* mergePDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mergePDF.png; path = "Sao's PDF Kit/Graphics/mergePDF.png"; sourceTree = "<group>"; };
+		B95336ED1C5CA94700539667 /* splitPDF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splitPDF.png; path = "Sao's PDF Kit/Graphics/splitPDF.png"; sourceTree = "<group>"; };
+		B95336EE1C5CA94700539667 /* editLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = editLabel.png; path = "Sao's PDF Kit/Graphics/editLabel.png"; sourceTree = "<group>"; };
 		B980C8CE1C64F6CB0099272E /* CCDropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropTableView.h; sourceTree = "<group>"; };
 		B980C8CF1C64F6CB0099272E /* CCDropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropTableView.m; sourceTree = "<group>"; };
-		B987736A1C6549FF00F16116 /* mergePDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mergePDFView.h; sourceTree = "<group>"; };
-		B987736B1C654A0000F16116 /* mergePDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mergePDFView.m; sourceTree = "<group>"; };
+		B987736D1C65C4B600F16116 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		B9E7E13B1C58AB2400B04EA8 /* Sao's PDF Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao's PDF Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E7E13E1C58AB2400B04EA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,36 +43,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B987736E1C65C4B700F16116 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B980C8CC1C64F61B0099272E /* splitPDFView */ = {
+		B987736F1C65C4DB00F16116 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B97BDB3D1C59251300227D0F /* splitPDFView.h */,
-				B97BDB3E1C59251300227D0F /* splitPDFView.m */,
-				B97BDB441C592C3F00227D0F /* splitPDFView.xib */,
+				B98773701C65C50700F16116 /* Linked Frameworks */,
 			);
-			name = splitPDFView;
+			name = Frameworks;
+			path = "Sao's PDF Kit";
 			sourceTree = "<group>";
 		};
-		B980C8CD1C64F6590099272E /* editLabelView */ = {
+		B98773701C65C50700F16116 /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B95336F21C5CB31200539667 /* editLabelView.h */,
-				B95336F31C5CB31200539667 /* editLabelView.m */,
-				B95336F91C5CB3A100539667 /* editLabelView.xib */,
+				B987736D1C65C4B600F16116 /* Quartz.framework */,
 			);
-			name = editLabelView;
+			name = "Linked Frameworks";
 			sourceTree = "<group>";
 		};
 		B9E7E1321C58AB2300B04EA8 = {
 			isa = PBXGroup;
 			children = (
 				B9E7E13D1C58AB2400B04EA8 /* Sao's PDF Kit */,
+				B987736F1C65C4DB00F16116 /* Frameworks */,
 				B9E7E13C1C58AB2400B04EA8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,9 +92,6 @@
 				B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */,
 				B9E7E1461C58AB2400B04EA8 /* MainMenu.xib */,
 				B9E91B991C5A819000A45A6E /* Custom Class */,
-				B9E91B951C5A0D8D00A45A6E /* mergePDFView */,
-				B980C8CC1C64F61B0099272E /* splitPDFView */,
-				B980C8CD1C64F6590099272E /* editLabelView */,
 				B9E91B941C5A0D5500A45A6E /* Graphics */,
 				B9E7E1491C58AB2400B04EA8 /* Info.plist */,
 				B9E7E1411C58AB2400B04EA8 /* Supporting Files */,
@@ -130,24 +110,12 @@
 		B9E91B941C5A0D5500A45A6E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
-				B95336EC1C5CA94700539667 /* mergePDFView.png */,
-				B95336ED1C5CA94700539667 /* splitPDFView.png */,
-				B95336EE1C5CA94700539667 /* editLabelView.png */,
+				B95336EC1C5CA94700539667 /* mergePDF.png */,
+				B95336ED1C5CA94700539667 /* splitPDF.png */,
+				B95336EE1C5CA94700539667 /* editLabel.png */,
 			);
 			name = Graphics;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		B9E91B951C5A0D8D00A45A6E /* mergePDFView */ = {
-			isa = PBXGroup;
-			children = (
-				B987736A1C6549FF00F16116 /* mergePDFView.h */,
-				B987736B1C654A0000F16116 /* mergePDFView.m */,
-				B97BDB3A1C59199D00227D0F /* mergePDFView.xib */,
-				B980C8CE1C64F6CB0099272E /* CCDropTableView.h */,
-				B980C8CF1C64F6CB0099272E /* CCDropTableView.m */,
-			);
-			name = mergePDFView;
 			sourceTree = "<group>";
 		};
 		B9E91B991C5A819000A45A6E /* Custom Class */ = {
@@ -155,6 +123,8 @@
 			children = (
 				B9E91B961C5A816F00A45A6E /* CCtabButton.h */,
 				B9E91B971C5A817000A45A6E /* CCtabButton.m */,
+				B980C8CE1C64F6CB0099272E /* CCDropTableView.h */,
+				B980C8CF1C64F6CB0099272E /* CCDropTableView.m */,
 			);
 			name = "Custom Class";
 			sourceTree = "<group>";
@@ -218,12 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */,
-				B95336EF1C5CA94700539667 /* mergePDFView.png in Resources */,
-				B95336F01C5CA94700539667 /* splitPDFView.png in Resources */,
-				B95336F71C5CB3A100539667 /* editLabelView.xib in Resources */,
-				B95336F11C5CA94700539667 /* editLabelView.png in Resources */,
-				B97BDB381C59199D00227D0F /* mergePDFView.xib in Resources */,
-				B97BDB421C592C3F00227D0F /* splitPDFView.xib in Resources */,
+				B95336EF1C5CA94700539667 /* mergePDF.png in Resources */,
+				B95336F01C5CA94700539667 /* splitPDF.png in Resources */,
+				B95336F11C5CA94700539667 /* editLabel.png in Resources */,
 				B9E7E1481C58AB2400B04EA8 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,11 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B980C8D01C64F6CB0099272E /* CCDropTableView.m in Sources */,
-				B95336F51C5CB31200539667 /* editLabelView.m in Sources */,
 				B9E7E1431C58AB2400B04EA8 /* main.m in Sources */,
 				B9E91B981C5A817000A45A6E /* CCtabButton.m in Sources */,
-				B97BDB401C59251300227D0F /* splitPDFView.m in Sources */,
-				B987736C1C654A0000F16116 /* mergePDFView.m in Sources */,
 				B9E7E1401C58AB2400B04EA8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,33 +212,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B95336F91C5CB3A100539667 /* editLabelView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B95336F81C5CB3A100539667 /* Base */,
-				B95336FB1C5CB3CC00539667 /* ja */,
-			);
-			name = editLabelView.xib;
-			sourceTree = "<group>";
-		};
-		B97BDB3A1C59199D00227D0F /* mergePDFView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B97BDB391C59199D00227D0F /* Base */,
-				B97BDB3C1C5919B000227D0F /* ja */,
-			);
-			name = mergePDFView.xib;
-			sourceTree = "<group>";
-		};
-		B97BDB441C592C3F00227D0F /* splitPDFView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B97BDB431C592C3F00227D0F /* Base */,
-				B97BDB461C592C4500227D0F /* ja */,
-			);
-			name = splitPDFView.xib;
-			sourceTree = "<group>";
-		};
 		B9E7E1461C58AB2400B04EA8 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

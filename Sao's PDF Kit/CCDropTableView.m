@@ -8,7 +8,7 @@
 
 #import "CCDropTableView.h"
 #import "AppDelegate.h"
-#import "mergePDFView.h"
+#import <Quartz/Quartz.h>
 
 @implementation CCDropTableView{
     BOOL bHighLight;
@@ -68,19 +68,21 @@
         if ([uti isEqualToString:@"com.adobe.pdf"]) {
             NSMutableDictionary *data = [NSMutableDictionary dictionary];
             NSDictionary *fInfo;
+            NSURL *url = [[NSURL alloc]initFileURLWithPath:path];
             fInfo = [filemgr attributesOfItemAtPath:path error:nil];
             [data setObject:[path lastPathComponent] forKey:@"fName"];
-            [data setObject:path forKey:@"fPath"];
+            [data setObject:url forKey:@"fPath"];
             [data setObject:[fInfo objectForKey:NSFileSize] forKey:@"fSize"];
             [data setObject:@"All Pages" forKey:@"pageRange"];
-            [appD.PDFLstController insertObject:data atArrangedObjectIndex:appD.PDFLst.count];
-            NSLog(@"data-%lu",(unsigned long)appD.PDFLst.count);
-            NSLog(@"pdf-%@",appD.PDFLstController.content);
+            //PDF情報を取得
+            PDFDocument *document;
+            document = [[PDFDocument alloc]initWithURL:url];
+            NSUInteger totalPage = [document pageCount];
+            [data setObject:[NSNumber numberWithUnsignedInteger:totalPage] forKey:@"totalPage"];
+            [appD.PDFLstController addObject:data];
         }else{
             [appD.errLst addObject:path];
-            NSLog(@"err-%@",appD.errLst);
         }
-        [self reloadData];
     }
     return YES;
 }
