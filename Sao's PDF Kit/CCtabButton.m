@@ -27,9 +27,9 @@ static NSColor*	_activeColor = nil;
     // Drawing code here.
 }
 
-//タブの切り替え
 - (void)mouseDown:(NSEvent *)theEvent{
     AppDelegate* appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+    [appD loadView:self.identifier];
     [appD.tabImage setImage:[NSImage imageNamed:self.identifier]];
     for (NSTextField *tab in appD.tabList){
         if ([tab.identifier isEqualTo: self.identifier]) {
@@ -38,7 +38,6 @@ static NSColor*	_activeColor = nil;
             [tab setTextColor:[NSColor whiteColor]];
         }
     }
-    [appD.tabView selectTabViewItemWithIdentifier:[NSString stringWithFormat:@"%@View",self.identifier]];
 }
 
 @end

@@ -12,13 +12,12 @@
 
 @end
 
-@implementation AppDelegate{
-    
-}
+@implementation AppDelegate
 
-@synthesize tabList,mergePDFTable,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
+@synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self loadView:@"mergePDFView"];
     tabList = [NSArray arrayWithObjects:tabButton1,tabButton2,tabButton3,nil];
 }
 
@@ -34,38 +33,13 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
 }
 
-- (IBAction)comboPageRange:(id)sender {
-    if ([sender indexOfSelectedItem] == 0) {
-        [sender setStringValue:@"All Pages"];
-        [_window makeFirstResponder:nil];
-        [sender setEditable:NO];
-    } else if ([sender indexOfSelectedItem] == 1){
-        [sender setStringValue:@""];
-        [sender setEditable:YES];
-        [_window makeFirstResponder:sender];
+- (void)loadView:(NSString *)viewName{
+    if(_currentViewController){
+        [[_currentViewController view] removeFromSuperview];
     }
+    _currentViewController = [[NSViewController alloc]initWithNibName:viewName bundle:nil];
+    NSView *view = [_currentViewController view];
+    [_contentView addSubview:view];
 }
 
-#pragma mark - MergePDFLst／Drag Operation
-
-//ドラッグ（ペーストボードに書き込む）を開始
-- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(nonnull NSIndexSet *)rowIndexes toPasteboard:(nonnull NSPasteboard *)pboard{
-    NSLog(@"dragging");
-    return YES;
-}
-
-//ドロップを確認
-- (NSDragOperation)tableview:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op{
-    //間へのドロップのみ認証
-    [tv setDropRow:row dropOperation:NSTableViewDropAbove];
-    if ([info draggingSource] == mergePDFTable) {
-        return NSDragOperationMove;
-    }
-    return NSDragOperationEvery;
-}
-
-//ドロップ受付開始
-- (BOOL)tableView:(NSTableView *)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation{
-    return YES;
-}
 @end

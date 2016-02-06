@@ -81,11 +81,12 @@
             document = [[PDFDocument alloc]initWithURL:url];
             NSUInteger totalPage = [document pageCount];
             [data setObject:[NSNumber numberWithUnsignedInteger:totalPage] forKey:@"totalPage"];
-            [appD.PDFLstController addObject:data];
+            [appD.PDFLst addObject:data];
         }else{
             [appD.errLst addObject:path];
         }
     }
+    [self reloadData];
     return YES;
 }
 

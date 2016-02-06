@@ -9,19 +9,20 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
+    IBOutlet NSView *_contentView;
 }
 
-@property (nonatomic,readwrite)NSArray *tabList;
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSImageView *tabImage;
 @property (weak) IBOutlet NSTextField *tabButton1;
 @property (weak) IBOutlet NSTextField *tabButton2;
 @property (weak) IBOutlet NSTextField *tabButton3;
-@property (weak) IBOutlet NSTableView *mergePDFTable;
-@property (weak) IBOutlet NSTabView *tabView;
-@property (weak) IBOutlet NSArrayController *PDFLstController;
+@property (readonly,nonatomic)NSViewController *currentViewController;
+@property (readwrite,nonatomic)NSArray *tabList;
 @property (readwrite,retain,nonatomic)NSMutableArray* PDFLst;
 @property (readwrite,retain,nonatomic)NSMutableArray* errLst;
+
+- (void)loadView:(NSString *)viewName;
 
 @end
 
