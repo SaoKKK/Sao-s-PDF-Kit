@@ -1,5 +1,5 @@
 //
-//  mergePDFView.h
+//  CCDropTableView.h
 //  Sao's PDF Kit
 //
 //  Created by 河野 さおり on 2016/02/06.
@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface mergePDFView : NSViewController<NSTableViewDelegate,NSTableViewDataSource>{
-    @private
-    IBOutlet NSTableView *_tableView;
-}
+@interface CCDropTableView : NSTableView
 
 @end

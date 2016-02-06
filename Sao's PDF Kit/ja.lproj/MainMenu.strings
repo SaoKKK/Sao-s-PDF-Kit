@@ -389,17 +389,12 @@
 /* Class = "NSMenuItem"; title = "Show Substitutions"; ObjectID = "z6F-FW-3nz"; */
 "z6F-FW-3nz.title" = "Show Substitutions";
 
-/* Class = "NSButton"; title = "Merge PDF"; ObjectID = "nIi-0e-VQy"; */
-"nIi-0e-VQy.title" = "PDFを結合";
+//tab label "Merge PDF"
+"rBX-xS-02e.title" = "　PDFを結合";
 
-/* Class = "NSButton"; title = "Split PDF"; ObjectID = "uLz-LS-Rsl"; */
-"uLz-LS-Rsl.title" = "PDFを分割";
+//tab label "Split PDF"
+"DNR-ua-fXM.title" = "　PDFを分割";
 
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
-/* Class = ""; title = ""; ObjectID = ""; */
+//tab label "Edit Label"
+"V8o-XS-bbd.title" = "　目次を編集";
+

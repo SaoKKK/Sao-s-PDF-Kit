@@ -10,18 +10,22 @@
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
+@synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
     [self loadView:@"mergePDFView"];
+    tabList = [NSArray arrayWithObjects:tabButton1,tabButton2,tabButton3,nil];
+}
+
+- (void)awakeFromNib{
+    PDFLst = [NSMutableArray array];
+    errLst = [NSMutableArray array];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
 }
 
 - (void)loadView:(NSString *)viewName{
@@ -33,11 +37,4 @@
     [_contentView addSubview:view];
 }
 
-- (IBAction)pshLoadMergePDFView:(id)sender {
-    [self loadView:@"mergePDFView"];
-}
-
-- (IBAction)pshLoadSplitPDFView:(id)sender {
-    [self loadView:@"splitPDFView"];
-}
 @end
