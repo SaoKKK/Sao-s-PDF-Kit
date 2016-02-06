@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import <Quartz/Quartz.h>
 
+#define BasicTableViewDragAndDropDataType @"BasicTableViewDragAndDropDataType"
+
 @implementation CCDropTableView{
     BOOL bHighLight;
 }
@@ -21,7 +23,7 @@
 
 //ドラッグを受け付けるファイルタイプを設定
 - (void)awakeFromNib{
-    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType,nil]];
+    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType,BasicTableViewDragAndDropDataType,nil]];
 }
 
 //ハイライトの描画

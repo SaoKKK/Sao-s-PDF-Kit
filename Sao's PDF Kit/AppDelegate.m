@@ -16,7 +16,7 @@
     
 }
 
-@synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
+@synthesize tabList,mergePDFTable,tabButton1,tabButton2,tabButton3,PDFLst,errLst;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     tabList = [NSArray arrayWithObjects:tabButton1,tabButton2,tabButton3,nil];
@@ -46,4 +46,26 @@
     }
 }
 
+#pragma mark - MergePDFLst／Drag Operation
+
+//ドラッグ（ペーストボードに書き込む）を開始
+- (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(nonnull NSIndexSet *)rowIndexes toPasteboard:(nonnull NSPasteboard *)pboard{
+    NSLog(@"dragging");
+    return YES;
+}
+
+//ドロップを確認
+- (NSDragOperation)tableview:(NSTableView*)tv validateDrop:(id <NSDraggingInfo>)info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op{
+    //間へのドロップのみ認証
+    [tv setDropRow:row dropOperation:NSTableViewDropAbove];
+    if ([info draggingSource] == mergePDFTable) {
+        return NSDragOperationMove;
+    }
+    return NSDragOperationEvery;
+}
+
+//ドロップ受付開始
+- (BOOL)tableView:(NSTableView *)tv acceptDrop:(id <NSDraggingInfo>)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)operation{
+    return YES;
+}
 @end

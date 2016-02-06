@@ -677,7 +677,7 @@
         <window title="Sao's PDF Kit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
-            <rect key="contentRect" x="0.0" y="399" width="600" height="400"/>
+            <rect key="contentRect" x="79" y="345" width="600" height="400"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
@@ -889,6 +889,7 @@
                                                         </tableColumns>
                                                         <connections>
                                                             <binding destination="hhp-1g-LUa" name="content" keyPath="arrangedObjects" id="Dde-Te-SBt"/>
+                                                            <outlet property="dataSource" destination="Voe-Tx-rLC" id="u5v-RK-9Zc"/>
                                                             <outlet property="delegate" destination="Voe-Tx-rLC" id="RuT-YH-ODF"/>
                                                         </connections>
                                                     </tableView>
