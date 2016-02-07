@@ -714,7 +714,7 @@
                         </textFieldCell>
                     </textField>
                     <customView id="Pg1-h8-OND">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="370"/>
+                        <rect key="frame" x="0.0" y="-1" width="600" height="370"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
                 </subviews>

@@ -9,7 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface mergePDFView : NSViewController <NSTableViewDataSource,NSTableViewDelegate>{
+    @private
     IBOutlet NSTableView *mergePDFtable;
+    NSIndexSet *dragRows; //ドラッグ中の行インデクスを保持
 }
 
 @end

@@ -10,8 +10,6 @@
 #import "AppDelegate.h"
 #import <Quartz/Quartz.h>
 
-#define BasicTableViewDragAndDropDataType @"BasicTableViewDragAndDropDataType"
-
 @implementation CCDropTableView{
     BOOL bHighLight;
 }
@@ -19,11 +17,6 @@
 - (id)initWithFrame:(NSRect)frame{
     self = [super initWithFrame:frame];
     return self;
-}
-
-//ドラッグを受け付けるファイルタイプを設定
-- (void)awakeFromNib{
-    [self registerForDraggedTypes:[NSArray arrayWithObjects:NSFilenamesPboardType,BasicTableViewDragAndDropDataType,nil]];
 }
 
 //ハイライトの描画
@@ -73,7 +66,7 @@
             NSURL *url = [[NSURL alloc]initFileURLWithPath:path];
             fInfo = [filemgr attributesOfItemAtPath:path error:nil];
             [data setObject:[path lastPathComponent] forKey:@"fName"];
-            [data setObject:url forKey:@"fPath"];
+            [data setObject:path forKey:@"fPath"];
             [data setObject:[fInfo objectForKey:NSFileSize] forKey:@"fSize"];
             [data setObject:@"All Pages" forKey:@"pageRange"];
             //PDF情報を取得
