@@ -8,7 +8,6 @@
 
 #import "CCDropTableView.h"
 #import "AppDelegate.h"
-#import <Quartz/Quartz.h>
 
 @implementation CCDropTableView{
     BOOL bHighLight;

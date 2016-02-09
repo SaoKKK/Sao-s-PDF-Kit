@@ -27,7 +27,7 @@
                         <rect key="frame" x="1" y="0.0" width="492" height="298"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="23" headerView="LWx-8P-T4C" viewBased="YES" id="hmZ-gs-a04" customClass="CCDropTableView">
+                            <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="23" headerView="LWx-8P-T4C" viewBased="YES" id="hmZ-gs-a04">
                                 <rect key="frame" x="0.0" y="0.0" width="492" height="275"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
@@ -59,6 +59,9 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="LvC-bX-jkl" name="value" keyPath="objectValue" id="Wlt-l3-Qag"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
@@ -92,7 +95,7 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             <connections>
-                                                                <binding destination="ydc-ZC-ami" name="value" keyPath="objectValue" id="GkH-uT-AUE"/>
+                                                                <binding destination="ydc-ZC-ami" name="value" keyPath="objectValue" id="oru-Gy-f34"/>
                                                             </connections>
                                                         </textFieldCell>
                                                     </textField>
@@ -127,6 +130,9 @@
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="hCg-Ze-bXZ" name="value" keyPath="objectValue" id="auT-DH-ulN"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <connections>
@@ -165,7 +171,7 @@
                                                         </comboBoxCell>
                                                         <connections>
                                                             <action selector="comboPageRange:" target="KcK-96-67Q" id="Ofh-ws-6im"/>
-                                                            <binding destination="3SR-C1-Xhz" name="value" keyPath="objectValue" id="LZE-3i-EUZ"/>
+                                                            <binding destination="3SR-C1-Xhz" name="value" keyPath="objectValue" id="QS3-4J-v8B"/>
                                                         </connections>
                                                     </comboBox>
                                                 </subviews>
@@ -195,13 +201,43 @@
                     </tableHeaderView>
                 </scrollView>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-fc-nco">
-                    <rect key="frame" x="30" y="35" width="25" height="29"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hnr-tf-Whr">
+                    <rect key="frame" x="0.0" y="48" width="24" height="26"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hnr-tf-Whr">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="smallSystem"/>
                     </buttonCell>
                     <connections>
-                        <action selector="pshAddPDF:" target="KcK-96-67Q" id="5zy-ot-IFR"/>
+                        <action selector="btnAdd:" target="KcK-96-67Q" id="7mv-bH-3MY"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-Ry-vGf">
+                    <rect key="frame" x="23" y="48" width="24" height="26"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HJK-Y3-htF">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnRemove:" target="KcK-96-67Q" id="sWe-wh-6gi"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R55-pL-DkL">
+                    <rect key="frame" x="46" y="48" width="24" height="26"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ePL-4i-XzC">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnOpenData:" target="KcK-96-67Q" id="OKw-Ac-VjK"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V6-by-dhf">
+                    <rect key="frame" x="69" y="48" width="24" height="26"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MLN-ig-9cN">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="btnSaveData:" target="KcK-96-67Q" id="9Vn-fe-9X1"/>
                     </connections>
                 </button>
             </subviews>
@@ -209,5 +245,6 @@
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
     </resources>
 </document>
