@@ -11,6 +11,7 @@
 @interface mergePDFView : NSViewController <NSTableViewDataSource,NSTableViewDelegate>{
     @private
     IBOutlet NSTableView *mergePDFtable;
+    IBOutlet NSButton *btnRemove;
     NSIndexSet *dragRows; //ドラッグ中の行インデクスを保持
 }
 

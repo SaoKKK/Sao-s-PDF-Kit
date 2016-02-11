@@ -18,11 +18,18 @@
 		B98773791C65F27200F16116 /* mergePDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98773771C65F27200F16116 /* mergePDFView.xib */; };
 		B987737D1C65F39800F16116 /* splitPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = B987737B1C65F39800F16116 /* splitPDFView.m */; };
 		B987737E1C65F39800F16116 /* splitPDFView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B987737C1C65F39800F16116 /* splitPDFView.xib */; };
+		B9E203C71C6C6153003EEC9C /* vline.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E203C61C6C6152003EEC9C /* vline.png */; };
+		B9E203CB1C6C635F003EEC9C /* btnSave.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E203CA1C6C635F003EEC9C /* btnSave.png */; };
+		B9E203CD1C6C8C13003EEC9C /* btnRestore.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E203CC1C6C8C13003EEC9C /* btnRestore.png */; };
+		B9E203CF1C6CBEFA003EEC9C /* btnClear.png in Resources */ = {isa = PBXBuildFile; fileRef = B9E203CE1C6CBEF9003EEC9C /* btnClear.png */; };
 		B9E7E1401C58AB2400B04EA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */; };
 		B9E7E1431C58AB2400B04EA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E7E1421C58AB2400B04EA8 /* main.m */; };
 		B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9E7E1441C58AB2400B04EA8 /* Assets.xcassets */; };
 		B9E7E1481C58AB2400B04EA8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E7E1461C58AB2400B04EA8 /* MainMenu.xib */; };
 		B9E91B981C5A817000A45A6E /* CCtabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E91B971C5A817000A45A6E /* CCtabButton.m */; };
+		B9F21A4A1C69AAF600D3D2C9 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A491C69AAF600D3D2C9 /* line.png */; };
+		B9F21A541C69F29000D3D2C9 /* btnAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A4F1C69F29000D3D2C9 /* btnAdd.png */; };
+		B9F21A571C69F29000D3D2C9 /* btnRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A521C69F29000D3D2C9 /* btnRemove.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,10 @@
 		B987737A1C65F39800F16116 /* splitPDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = splitPDFView.h; sourceTree = "<group>"; };
 		B987737B1C65F39800F16116 /* splitPDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = splitPDFView.m; sourceTree = "<group>"; };
 		B987737C1C65F39800F16116 /* splitPDFView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = splitPDFView.xib; sourceTree = "<group>"; };
+		B9E203C61C6C6152003EEC9C /* vline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vline.png; path = "Sao's PDF Kit/Graphics/vline.png"; sourceTree = "<group>"; };
+		B9E203CA1C6C635F003EEC9C /* btnSave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnSave.png; path = "Sao's PDF Kit/Graphics/btnSave.png"; sourceTree = "<group>"; };
+		B9E203CC1C6C8C13003EEC9C /* btnRestore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnRestore.png; path = "Sao's PDF Kit/Graphics/btnRestore.png"; sourceTree = "<group>"; };
+		B9E203CE1C6CBEF9003EEC9C /* btnClear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnClear.png; path = "Sao's PDF Kit/Graphics/btnClear.png"; sourceTree = "<group>"; };
 		B9E7E13B1C58AB2400B04EA8 /* Sao's PDF Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sao's PDF Kit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9E7E13E1C58AB2400B04EA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9E7E13F1C58AB2400B04EA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +61,9 @@
 		B9E7E1511C58AD7100B04EA8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		B9E91B961C5A816F00A45A6E /* CCtabButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCtabButton.h; sourceTree = "<group>"; };
 		B9E91B971C5A817000A45A6E /* CCtabButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCtabButton.m; sourceTree = "<group>"; };
+		B9F21A491C69AAF600D3D2C9 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = "Sao's PDF Kit/Graphics/line.png"; sourceTree = "<group>"; };
+		B9F21A4F1C69F29000D3D2C9 /* btnAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnAdd.png; path = "Sao's PDF Kit/Graphics/btnAdd.png"; sourceTree = "<group>"; };
+		B9F21A521C69F29000D3D2C9 /* btnRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnRemove.png; path = "Sao's PDF Kit/Graphics/btnRemove.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +181,13 @@
 		B9E91B941C5A0D5500A45A6E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B9E203CE1C6CBEF9003EEC9C /* btnClear.png */,
+				B9E203CC1C6C8C13003EEC9C /* btnRestore.png */,
+				B9E203CA1C6C635F003EEC9C /* btnSave.png */,
+				B9E203C61C6C6152003EEC9C /* vline.png */,
+				B9F21A4F1C69F29000D3D2C9 /* btnAdd.png */,
+				B9F21A521C69F29000D3D2C9 /* btnRemove.png */,
+				B9F21A491C69AAF600D3D2C9 /* line.png */,
 				B95336EC1C5CA94700539667 /* mergePDFView.png */,
 				B95336ED1C5CA94700539667 /* splitPDFView.png */,
 				B95336EE1C5CA94700539667 /* editPDFView.png */,
@@ -242,15 +263,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9F21A571C69F29000D3D2C9 /* btnRemove.png in Resources */,
 				B9E7E1451C58AB2400B04EA8 /* Assets.xcassets in Resources */,
+				B9F21A4A1C69AAF600D3D2C9 /* line.png in Resources */,
 				B9041AEA1C6834DA0047557E /* PDFLst.array in Resources */,
 				B98163C51C66A6D600E3B24E /* editPDFView.xib in Resources */,
+				B9F21A541C69F29000D3D2C9 /* btnAdd.png in Resources */,
 				B95336EF1C5CA94700539667 /* mergePDFView.png in Resources */,
 				B95336F01C5CA94700539667 /* splitPDFView.png in Resources */,
 				B95336F11C5CA94700539667 /* editPDFView.png in Resources */,
+				B9E203CB1C6C635F003EEC9C /* btnSave.png in Resources */,
+				B9E203CF1C6CBEFA003EEC9C /* btnClear.png in Resources */,
+				B9E203CD1C6C8C13003EEC9C /* btnRestore.png in Resources */,
 				B98773791C65F27200F16116 /* mergePDFView.xib in Resources */,
 				B9E7E1481C58AB2400B04EA8 /* MainMenu.xib in Resources */,
 				B987737E1C65F39800F16116 /* splitPDFView.xib in Resources */,
+				B9E203C71C6C6153003EEC9C /* vline.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

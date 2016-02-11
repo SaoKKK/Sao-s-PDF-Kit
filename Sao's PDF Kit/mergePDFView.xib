@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="mergePDFView">
@@ -12,23 +13,101 @@
         </customObject>
         <customObject id="KcK-96-67Q" customClass="mergePDFView">
             <connections>
+                <outlet property="btnRemove" destination="ZkI-Ry-vGf" id="lz6-Sy-55G"/>
                 <outlet property="mergePDFtable" destination="hmZ-gs-a04" id="pne-uw-FmY"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="370"/>
+            <rect key="frame" x="0.0" y="0.0" width="770" height="325"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <box fixedFrame="YES" title="Box" boxType="custom" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="HTp-1J-ihf">
+                    <rect key="frame" x="0.0" y="0.0" width="494" height="28"/>
+                    <view key="contentView" ambiguous="YES" id="JqX-zW-s1X">
+                        <rect key="frame" x="1" y="1" width="492" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button identifier="Remove" toolTip="Remove selected files" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-Ry-vGf">
+                                <rect key="frame" x="28" y="0.0" width="28" height="28"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btnRemove" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" enabled="NO" state="on" imageScaling="proportionallyDown" inset="2" id="HJK-Y3-htF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+CA
+</string>
+                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnRemove:" target="KcK-96-67Q" id="gEB-VQ-hQh"/>
+                                </connections>
+                            </button>
+                            <button identifier="Add" toolTip="Add a new PDF file" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-fc-nco">
+                                <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="btnAdd" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="hnr-tf-Whr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnAdd:" target="KcK-96-67Q" id="zvU-Hp-ATM"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0LX-fv-IwR">
+                                <rect key="frame" x="60" y="4" width="1" height="18"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="vline" id="kqh-d5-f19"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zqi-b6-bUH">
+                                <rect key="frame" x="133" y="4" width="1" height="18"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="vline" id="yjW-CJ-fko"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R55-pL-DkL">
+                                <rect key="frame" x="139" y="2" width="130" height="22"/>
+                                <buttonCell key="cell" type="square" title="Store Work State" bezelStyle="shadowlessSquare" image="btnSave" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="ePL-4i-XzC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnSaveData:" target="KcK-96-67Q" id="EJT-y5-PmW"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRf-dW-6YQ">
+                                <rect key="frame" x="67" y="2" width="60" height="22"/>
+                                <buttonCell key="cell" type="square" title="Clear" bezelStyle="shadowlessSquare" image="btnClear" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="2bm-ay-4PA">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnClear:" target="KcK-96-67Q" id="S07-iw-cHp"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V6-by-dhf">
+                                <rect key="frame" x="280" y="2" width="143" height="22"/>
+                                <buttonCell key="cell" type="square" title="Restore Work State" bezelStyle="shadowlessSquare" image="btnRestore" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="MLN-ig-9cN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnOpenData:" target="KcK-96-67Q" id="4dg-Ha-OSO"/>
+                                </connections>
+                            </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gc-aD-uNu">
+                                <rect key="frame" x="273" y="4" width="1" height="18"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="vline" id="Mbz-Ji-TuA"/>
+                            </imageView>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" red="0.31724759615384612" green="0.31724759615384612" blue="0.31724759615384612" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                    <color key="fillColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                </box>
                 <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="25" horizontalPageScroll="10" verticalLineScroll="25" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tG-FA-OSg">
-                    <rect key="frame" x="0.0" y="71" width="494" height="299"/>
+                    <rect key="frame" x="0.0" y="27" width="494" height="298"/>
                     <clipView key="contentView" ambiguous="YES" id="e59-C7-sos">
-                        <rect key="frame" x="1" y="0.0" width="492" height="298"/>
+                        <rect key="frame" x="1" y="0.0" width="492" height="297"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" rowHeight="23" headerView="LWx-8P-T4C" viewBased="YES" id="hmZ-gs-a04">
-                                <rect key="frame" x="0.0" y="0.0" width="492" height="275"/>
+                                <rect key="frame" x="0.0" y="0.0" width="492" height="274"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <size key="intercellSpacing" width="3" height="2"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -200,51 +279,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-fc-nco">
-                    <rect key="frame" x="0.0" y="48" width="24" height="26"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hnr-tf-Whr">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="btnAdd:" target="KcK-96-67Q" id="7mv-bH-3MY"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-Ry-vGf">
-                    <rect key="frame" x="23" y="48" width="24" height="26"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HJK-Y3-htF">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="btnRemove:" target="KcK-96-67Q" id="sWe-wh-6gi"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R55-pL-DkL">
-                    <rect key="frame" x="46" y="48" width="24" height="26"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ePL-4i-XzC">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="btnOpenData:" target="KcK-96-67Q" id="OKw-Ac-VjK"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4V6-by-dhf">
-                    <rect key="frame" x="69" y="48" width="24" height="26"/>
-                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MLN-ig-9cN">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="btnSaveData:" target="KcK-96-67Q" id="9Vn-fe-9X1"/>
-                    </connections>
-                </button>
             </subviews>
+            <point key="canvasLocation" x="223" y="345.5"/>
         </customView>
     </objects>
     <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="btnAdd" width="28" height="28"/>
+        <image name="btnClear" width="22" height="22"/>
+        <image name="btnRemove" width="28" height="28"/>
+        <image name="btnRestore" width="22" height="22"/>
+        <image name="btnSave" width="22" height="22"/>
+        <image name="vline" width="1" height="18"/>
     </resources>
 </document>

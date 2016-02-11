@@ -46,6 +46,15 @@
     return cellView;
 }
 
+//行の選択状態の変化
+- (void)tableViewSelectionDidChange:(NSNotification *)notification{
+    if ([[mergePDFtable selectedRowIndexes]count] != 0) {
+        [btnRemove setEnabled:YES];
+    } else {
+        [btnRemove setEnabled:NO];
+    }
+}
+
 #pragma mark - Button Action
 
 //コンボボックス・アクション/データ更新
@@ -66,13 +75,42 @@
     [appD.PDFLst replaceObjectAtIndex:row withObject:data];
 }
 
-- (IBAction)btnAdd:(id)sender {
+//行追加
+- (IBAction)btnAdd:(id)sender{
     AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
-    NSLog(@"%@",appD.PDFLst);
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    NSArray *fileTypes = [NSArray arrayWithObjects:@"pdf", nil];
+    [openPanel setAllowedFileTypes:fileTypes];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel setAllowsMultipleSelection:YES];
+    [openPanel beginSheetModalForWindow:appD.window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton) {
+            for (NSURL *url in [openPanel URLs]) {
+                [self addToPDFLst:url atIndex:appD.PDFLst.count];
+            }
+            [mergePDFtable reloadData];
+            [btnRemove setEnabled:NO];
+        }
+    }];
 }
 
-- (IBAction)btnRemove:(id)sender {
+//行削除
+- (IBAction)btnRemove:(id)sender{
+    AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+    NSIndexSet *selectedRows = [mergePDFtable selectedRowIndexes];
+    [appD.PDFLst removeObjectsAtIndexes:selectedRows];
+    [mergePDFtable reloadData];
+    [btnRemove setEnabled:NO];
 }
+
+//テーブル・クリア
+- (IBAction)btnClear:(id)sender {
+    AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+    [appD.PDFLst removeAllObjects];
+    [mergePDFtable reloadData];
+    [btnRemove setEnabled:NO];
+}
+
 
 - (IBAction)btnOpenData:(id)sender {
     AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
@@ -86,10 +124,6 @@
 }
 
 #pragma mark - Drag Operation Method
-
-/*- (void) tableView:(NSTableView *)tableView draggingSession:(NSDraggingSession *)session willBeginAtPoint:(NSPoint)screenPoint forRowIndexes:(NSIndexSet *)rowIndexes{
-    NSLog(@"%s",__func__);
-}*/
 
 //ドラッグを開始（ペーストボードに書き込む）
 - (BOOL)tableView:(NSTableView *)tv writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
@@ -139,32 +173,36 @@
         NSPasteboard *pasteboard = [info draggingPasteboard];
         NSArray *dropDataList = [pasteboard propertyListForType:NSFilenamesPboardType];
         NSWorkspace *workSpc = [NSWorkspace sharedWorkspace];
-        NSFileManager *fileMgr = [NSFileManager defaultManager];
         [appD.errLst removeAllObjects];
         for (id path in dropDataList) {
             NSString *uti = [workSpc typeOfFile:path error:nil];
             NSString *fName = [path lastPathComponent];
             if ([uti isEqualToString:@"com.adobe.pdf"]) {
-                NSURL *url = [[NSURL alloc]initFileURLWithPath:path];
-                NSDictionary *fInfo = [NSDictionary dictionaryWithDictionary:[fileMgr attributesOfItemAtPath:path error:nil]];
-                NSMutableDictionary *data = [NSMutableDictionary dictionary];
-                [data setObject:path  forKey:@"fPath"];
-                [data setObject:fName forKey:@"fName"];
-                [data setObject:[fInfo objectForKey:NSFileSize] forKey:@"fSize"];
-                [data setObject:@"All Pages" forKey:@"pageRange"];
-                //PDF情報を取得
-                PDFDocument *document = [[PDFDocument alloc]initWithURL:url];
-                NSUInteger totalPage = [document pageCount];
-                [data setObject:[NSNumber numberWithUnsignedInteger:totalPage] forKey:@"totalPage"];
-                [appD.PDFLst insertObject:data atIndex:row];
+                [self addToPDFLst:[NSURL fileURLWithPath:path] atIndex:row];
+                row ++;
             } else {
                 [appD.errLst addObject:fName];
             }
-            row ++;
         }
     }
     [tv reloadData];
     return YES;
 }
 
+//PDFファイル情報を配列に追加
+- (void)addToPDFLst:(NSURL*)url atIndex:(NSInteger)row{
+    AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSDictionary *fInfo = [NSDictionary dictionaryWithDictionary:[fileMgr attributesOfItemAtPath:[url path] error:nil]];
+    NSMutableDictionary *data = [NSMutableDictionary dictionary];
+    [data setObject:[url path] forKey:@"fPath"];
+    [data setObject:[[url path]lastPathComponent] forKey:@"fName"];
+    [data setObject:[fInfo objectForKey:NSFileSize] forKey:@"fSize"];
+    [data setObject:@"All Pages" forKey:@"pageRange"];
+    //PDF情報を取得
+    PDFDocument *document = [[PDFDocument alloc]initWithURL:url];
+    NSUInteger totalPage = [document pageCount];
+    [data setObject:[NSNumber numberWithUnsignedInteger:totalPage] forKey:@"totalPage"];
+    [appD.PDFLst insertObject:data atIndex:row];
+}
 @end
