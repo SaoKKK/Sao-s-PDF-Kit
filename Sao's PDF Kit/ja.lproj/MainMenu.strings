@@ -398,3 +398,5 @@
 //tab label "Edit Label"
 "V8o-XS-bbd.title" = "　目次を編集";
 
+//sheet window's textfield's string value
+"PcS-Dx-l5W.title" = "以下のファイルの読み込みに失敗しました。";

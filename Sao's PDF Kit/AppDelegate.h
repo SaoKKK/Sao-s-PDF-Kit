@@ -10,9 +10,11 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>{
     IBOutlet NSView *_contentView;
+    IBOutlet NSTableView *errTable;
 }
 
 @property (weak) IBOutlet NSWindow *window;
+@property (weak) IBOutlet NSWindow *sheetWin;
 @property (weak) IBOutlet NSImageView *tabImage;
 @property (weak) IBOutlet NSTextField *tabButton1;
 @property (weak) IBOutlet NSTextField *tabButton2;
@@ -23,6 +25,7 @@
 @property (readwrite,retain,nonatomic)NSMutableArray* errLst;
 
 - (void)loadView:(NSString *)viewName;
+- (void)showErrLst;
 
 @end
 

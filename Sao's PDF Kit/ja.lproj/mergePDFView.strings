@@ -1,0 +1,57 @@
+
+/* Class = "NSButtonCell"; title = "Clear"; ObjectID = "2bm-ay-4PA"; */
+"2bm-ay-4PA.title" = "Clear";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "6eF-mD-wbA"; */
+"6eF-mD-wbA.title" = "Table View Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Total Page"; ObjectID = "7mp-us-Wg0"; */
+"7mp-us-Wg0.headerCell.title" = "Total Page";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "7nC-7a-h7M"; */
+"7nC-7a-h7M.title" = "Text Cell";
+
+/* Class = "NSComboBoxCell"; 8Nv-9s-ejy.ibShadowedObjectValues[0] = "All Pages"; ObjectID = "8Nv-9s-ejy"; */
+"8Nv-9s-ejy.ibShadowedObjectValues[0]" = "All Pages";
+
+/* Class = "NSComboBoxCell"; 8Nv-9s-ejy.ibShadowedObjectValues[1] = "e.g. 1-3,5,10"; ObjectID = "8Nv-9s-ejy"; */
+"8Nv-9s-ejy.ibShadowedObjectValues[1]" = "e.g. 1-3,5,10";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "GJ5-uc-je9"; */
+"GJ5-uc-je9.title" = "Table View Cell";
+
+/* Class = "NSBox"; title = "Box"; ObjectID = "HTp-1J-ihf"; */
+"HTp-1J-ihf.title" = "Box";
+
+/* Class = "NSButtonCell"; title = "Restore Work State"; ObjectID = "MLN-ig-9cN"; */
+"MLN-ig-9cN.title" = "Restore Work State";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Remove selected files"; ObjectID = "ZkI-Ry-vGf"; */
+"ZkI-Ry-vGf.ibShadowedToolTip" = "Remove selected files";
+
+/* Class = "NSTableColumn"; headerCell.title = "Page Range"; ObjectID = "be7-3X-ux5"; */
+"be7-3X-ux5.headerCell.title" = "Page Range";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "dxV-B5-xme"; */
+"dxV-B5-xme.title" = "Text Cell";
+
+/* Class = "NSButtonCell"; title = "Store Work State"; ObjectID = "ePL-4i-XzC"; */
+"ePL-4i-XzC.title" = "Store Work State";
+
+/* Class = "NSTableColumn"; headerCell.title = "File Name"; ObjectID = "eYW-gZ-m8e"; */
+"eYW-gZ-m8e.headerCell.title" = "File Name";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "el4-tl-KXD"; */
+"el4-tl-KXD.title" = "Text Cell";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Add a new PDF file"; ObjectID = "o7N-fc-nco"; */
+"o7N-fc-nco.ibShadowedToolTip" = "Add a new PDF file";
+
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "v1m-yw-eJ5"; */
+"v1m-yw-eJ5.title" = "Text Cell";
+
+/* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "vjH-mt-Exn"; */
+"vjH-mt-Exn.title" = "Table View Cell";
+
+/* Class = "NSTableColumn"; headerCell.title = "Size"; ObjectID = "y64-o8-MVV"; */
+"y64-o8-MVV.headerCell.title" = "Size";

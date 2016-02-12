@@ -186,6 +186,9 @@
         }
     }
     [tv reloadData];
+    if (appD.errLst.count > 0) {
+        [appD showErrLst];
+    }
     return YES;
 }
 
