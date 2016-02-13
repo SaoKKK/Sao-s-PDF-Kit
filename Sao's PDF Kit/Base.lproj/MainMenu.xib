@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -676,21 +677,42 @@
             </items>
         </menu>
         <window title="Sao's PDF Kit" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
-            <rect key="contentRect" x="79" y="345" width="770" height="358"/>
+            <rect key="contentRect" x="79" y="345" width="770" height="403"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <value key="minSize" type="size" width="770" height="403"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="770" height="358"/>
+                <rect key="frame" x="0.0" y="0.0" width="770" height="403"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <box title="Box" boxType="custom" borderType="none" titlePosition="noTitle" id="QWw-c2-4wN">
+                        <rect key="frame" x="0.0" y="374" width="770" height="29"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="Gyg-ZW-n0b">
+                            <rect key="frame" x="0.0" y="0.0" width="770" height="29"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" red="0.68627450980392157" green="0.69803921568627447" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                    </box>
+                    <box title="Box" boxType="custom" borderType="none" titlePosition="noTitle" id="IMU-TC-jkQ">
+                        <rect key="frame" x="0.0" y="372" width="770" height="2"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <view key="contentView" id="hXQ-bI-11i">
+                            <rect key="frame" x="0.0" y="0.0" width="770" height="2"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" red="0.14318914963765017" green="0.16311462109449759" blue="0.16623774509803924" alpha="1" colorSpace="calibratedRGB"/>
+                    </box>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="p7Q-ua-e59">
-                        <rect key="frame" x="0.0" y="323" width="770" height="35"/>
+                        <rect key="frame" x="0.0" y="368" width="350" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="mergePDFView" id="e9L-oH-10b"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" imageScaling="proportionallyDown" image="mergePDFView" id="e9L-oH-10b"/>
                     </imageView>
                     <textField identifier="mergePDFView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="yYS-Bd-sh0" customClass="CCtabButton">
-                        <rect key="frame" x="4" y="328" width="108" height="24"/>
+                        <rect key="frame" x="4" y="373" width="108" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" title="   Merge PDF" id="rBX-xS-02e">
                             <font key="font" metaFont="system"/>
@@ -699,7 +721,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="splitPDFView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="4hr-QT-aYE" customClass="CCtabButton">
-                        <rect key="frame" x="116" y="328" width="112" height="24"/>
+                        <rect key="frame" x="116" y="373" width="112" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" title="   Split PDF" id="DNR-ua-fXM">
                             <font key="font" metaFont="system"/>
@@ -708,7 +730,7 @@
                         </textFieldCell>
                     </textField>
                     <textField identifier="editPDFView" focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="zm9-Gp-rWJ" customClass="CCtabButton">
-                        <rect key="frame" x="232" y="328" width="110" height="24"/>
+                        <rect key="frame" x="232" y="373" width="110" height="24"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" focusRingType="none" alignment="center" title="     Edit Label" id="V8o-XS-bbd">
                             <font key="font" metaFont="system"/>
@@ -717,14 +739,9 @@
                         </textFieldCell>
                     </textField>
                     <customView id="Pg1-h8-OND">
-                        <rect key="frame" x="0.0" y="2" width="770" height="325"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="770" height="372"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </customView>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MIC-eD-9qq">
-                        <rect key="frame" x="0.0" y="0.0" width="770" height="2"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="line" id="1Ha-oG-YG0"/>
-                    </imageView>
                 </subviews>
             </view>
             <point key="canvasLocation" x="250" y="342"/>
@@ -755,7 +772,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="18" viewBased="YES" id="jw4-lY-ass">
-                                    <rect key="frame" x="0.0" y="0.0" width="258" height="79"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="258" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -832,7 +849,6 @@ DQ
         </window>
     </objects>
     <resources>
-        <image name="line" width="770" height="2"/>
-        <image name="mergePDFView" width="770" height="35"/>
+        <image name="mergePDFView" width="345" height="35"/>
     </resources>
 </document>

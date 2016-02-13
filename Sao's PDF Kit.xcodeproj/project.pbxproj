@@ -31,6 +31,7 @@
 		B9F21A4A1C69AAF600D3D2C9 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A491C69AAF600D3D2C9 /* line.png */; };
 		B9F21A541C69F29000D3D2C9 /* btnAdd.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A4F1C69F29000D3D2C9 /* btnAdd.png */; };
 		B9F21A571C69F29000D3D2C9 /* btnRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F21A521C69F29000D3D2C9 /* btnRemove.png */; };
+		B9F9FE331C6ED98300D89A4D /* infoView.png in Resources */ = {isa = PBXBuildFile; fileRef = B9F9FE321C6ED98300D89A4D /* infoView.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		B9F21A491C69AAF600D3D2C9 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = "Sao's PDF Kit/Graphics/line.png"; sourceTree = "<group>"; };
 		B9F21A4F1C69F29000D3D2C9 /* btnAdd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnAdd.png; path = "Sao's PDF Kit/Graphics/btnAdd.png"; sourceTree = "<group>"; };
 		B9F21A521C69F29000D3D2C9 /* btnRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btnRemove.png; path = "Sao's PDF Kit/Graphics/btnRemove.png"; sourceTree = "<group>"; };
+		B9F9FE321C6ED98300D89A4D /* infoView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = infoView.png; path = "Sao's PDF Kit/Graphics/infoView.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		B9E91B941C5A0D5500A45A6E /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				B9F9FE321C6ED98300D89A4D /* infoView.png */,
 				B9E203CE1C6CBEF9003EEC9C /* btnClear.png */,
 				B9E203CC1C6C8C13003EEC9C /* btnRestore.png */,
 				B9E203CA1C6C635F003EEC9C /* btnSave.png */,
@@ -284,6 +287,7 @@
 				B9F21A4A1C69AAF600D3D2C9 /* line.png in Resources */,
 				B9041AEA1C6834DA0047557E /* PDFLst.array in Resources */,
 				B93FA5211C6D3EC80034EC2C /* editPDFView.xib in Resources */,
+				B9F9FE331C6ED98300D89A4D /* infoView.png in Resources */,
 				B9F21A541C69F29000D3D2C9 /* btnAdd.png in Resources */,
 				B95336EF1C5CA94700539667 /* mergePDFView.png in Resources */,
 				B95336F01C5CA94700539667 /* splitPDFView.png in Resources */,

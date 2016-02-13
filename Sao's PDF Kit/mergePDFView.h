@@ -7,11 +7,13 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Quartz/Quartz.h>
 
 @interface mergePDFView : NSViewController <NSTableViewDataSource,NSTableViewDelegate>{
     @private
     IBOutlet NSTableView *mergePDFtable;
     IBOutlet NSButton *btnRemove;
+    IBOutlet PDFView *_pdfView;
     NSIndexSet *dragRows; //ドラッグ中の行インデクスを保持
 }
 

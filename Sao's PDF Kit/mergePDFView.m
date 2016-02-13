@@ -50,8 +50,27 @@
 - (void)tableViewSelectionDidChange:(NSNotification *)notification{
     if ([[mergePDFtable selectedRowIndexes]count] != 0) {
         [btnRemove setEnabled:YES];
+        if ([[mergePDFtable selectedRowIndexes]count] == 1){
+            //PDFViewにPDFドキュメントを設定
+            AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+            NSDictionary *data = [appD.PDFLst objectAtIndex:[mergePDFtable selectedRow]];
+            NSFileManager *fileMgr = [NSFileManager defaultManager];
+            NSString *fPath = [data objectForKey:@"fPath"];
+            if ([fileMgr fileExistsAtPath:fPath]) {
+                NSURL *url = [NSURL fileURLWithPath:fPath];
+                PDFDocument *document = [[PDFDocument alloc]initWithURL:url];
+                [_pdfView setDocument:document];
+            } else {
+                //テーブルのデータが実在しない場合
+                [_pdfView setDocument:nil];
+                
+            }
+        } else {
+            [_pdfView setDocument:nil];
+        }
     } else {
         [btnRemove setEnabled:NO];
+        [_pdfView setDocument:nil];
     }
 }
 
