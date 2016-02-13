@@ -52,7 +52,7 @@
         [btnRemove setEnabled:YES];
         if ([[mergePDFtable selectedRowIndexes]count] == 1){
             //PDFViewにPDFドキュメントを設定
-            AppDelegate *appD = (AppDelegate*)[[NSApplication sharedApplication]delegate];
+            AppDelegate *appD = [[NSApplication sharedApplication]delegate];
             NSDictionary *data = [appD.PDFLst objectAtIndex:[mergePDFtable selectedRow]];
             NSFileManager *fileMgr = [NSFileManager defaultManager];
             NSString *fPath = [data objectForKey:@"fPath"];
@@ -63,7 +63,10 @@
             } else {
                 //テーブルのデータが実在しない場合
                 [_pdfView setDocument:nil];
-                
+                [appD.statusWin setFrame:NSMakeRect(appD.window.frame.origin.x + _pdfView.frame.origin.x + (_pdfView.frame.size.width - appD.statusWin.frame.size.width)*0.5, appD.window.frame.origin.y + (appD.window.frame.size.height - appD.statusWin.frame.size.height)*0.5, appD.statusWin.frame.size.width, appD.statusWin.frame.size.height) display:NO];
+                [appD.statusWin setLevel:NSFloatingWindowLevel];
+                [appD.statusWin orderFront:self];
+                [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(closeStatusWin) userInfo:nil repeats:NO];
             }
         } else {
             [_pdfView setDocument:nil];
@@ -72,6 +75,11 @@
         [btnRemove setEnabled:NO];
         [_pdfView setDocument:nil];
     }
+}
+
+- (void)closeStatusWin{
+    AppDelegate *appD = [[NSApplication sharedApplication]delegate];
+    [appD.statusWin orderOut:self];
 }
 
 #pragma mark - Button Action

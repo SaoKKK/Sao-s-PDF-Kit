@@ -18,6 +18,7 @@
                 <outlet property="_contentView" destination="Pg1-h8-OND" id="fnf-UJ-3PU"/>
                 <outlet property="errTable" destination="jw4-lY-ass" id="88Y-Jf-fwh"/>
                 <outlet property="sheetWin" destination="Am5-24-S4c" id="EIG-sh-VnU"/>
+                <outlet property="statusWin" destination="Qix-r2-Osu" id="r2e-eF-wXu"/>
                 <outlet property="tabButton1" destination="yYS-Bd-sh0" id="qq7-3R-2Ea"/>
                 <outlet property="tabButton2" destination="4hr-QT-aYE" id="JId-BB-KVb"/>
                 <outlet property="tabButton3" destination="zm9-Gp-rWJ" id="P26-en-lvW"/>
@@ -844,6 +845,36 @@ DQ
                             <action selector="pshOK:" target="Voe-Tx-rLC" id="WfS-yN-aBG"/>
                         </connections>
                     </button>
+                </subviews>
+            </view>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Qix-r2-Osu" customClass="CCStatusWin">
+            <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="109" y="138" width="240" height="120"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <view key="contentView" id="IsR-aP-RbZ" customClass="CCBackGroundView">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Mz3-q5-DBx">
+                        <rect key="frame" x="18" y="76" width="204" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Failed to read the file." id="sAi-Va-YiT">
+                            <font key="font" metaFont="systemBold"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="odZ-O5-0Z8">
+                        <rect key="frame" x="18" y="14" width="204" height="45"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="The file does not exist..." id="JaK-zq-rpp">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
         </window>

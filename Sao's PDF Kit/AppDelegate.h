@@ -8,13 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>{
+@interface AppDelegate : NSObject <NSApplicationDelegate,NSWindowDelegate>{
     IBOutlet NSView *_contentView;
     IBOutlet NSTableView *errTable;
 }
 
 @property (weak) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSWindow *sheetWin;
+@property (weak) IBOutlet NSWindow *statusWin;
 @property (weak) IBOutlet NSImageView *tabImage;
 @property (weak) IBOutlet NSTextField *tabButton1;
 @property (weak) IBOutlet NSTextField *tabButton2;

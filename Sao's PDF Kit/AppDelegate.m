@@ -14,7 +14,7 @@
 
 @implementation AppDelegate
 
-@synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst,window,sheetWin;
+@synthesize tabList,tabButton1,tabButton2,tabButton3,PDFLst,errLst,window,sheetWin,statusWin;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self loadView:@"mergePDFView"];
